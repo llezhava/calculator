@@ -1,40 +1,13 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+:root {
+  --main-bg-color: AliceBlue;
+  --secondary-bg-color: brown;
 }
 
 .calculator {
-  width: 900px;
-  height: 900px;
+  width: 750px;
   border: 2px groove coral;
   border-radius: 15px;
-  background-color: lightgray;
-  margin: auto;
-  padding: 10px;
+  background-color: var(--main-bg-color);
 }
 
 .NumberInputs {
@@ -48,13 +21,42 @@ button {
 }
 
 #display {
+  height: 150px;
   border: 2px solid green;
   font-size: 3em;
-  background-color: white;
-  display: block;
-  align-items: left;
+  background-color: var(--main-bg-color);
 }
 
-#display #currentOutput {
+#currentOutput {
   border-top: 1px solid #8c8b8b;
+  height: 50%;
 }
+
+#history {
+  height: 50%;
+}
+
+.buttons {
+  display: grid;
+  grid-column-gap: 1px;
+  grid-template-columns: 75px 75px 75px
+}
+
+#commands {
+  grid-row: 1 / 4;
+  background-color: blue;
+
+}
+
+#numbers {
+  background-color: blue;
+  grid-row: 1 / 4;
+
+}
+
+#operators {
+  background-color: blue;
+  grid-row: 1 / 4;
+}
+
+

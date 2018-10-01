@@ -144,6 +144,9 @@ pressedCommand(value) {
     case "C":
       this.clearCalculator();
       break;
+      case "-+":
+      this.negateCommand();
+      break;
   }
 
   return value;
@@ -163,6 +166,16 @@ backSpaceCommand() {
   let currentOutput = this.state.currentOutput;
   let newOutput = currentOutput.slice(0, currentOutput.length - 1) || "0"
   this.setState({ currentOutput: newOutput || "0" });
+}
+
+negateCommand() {
+  let currentOutput = this.state.currentOutput
+
+  let number = -Number(currentOutput).toString()
+
+  console.log(number)
+
+  this.setState({currentOutput: number})
 }
 
 
