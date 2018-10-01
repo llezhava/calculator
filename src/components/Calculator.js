@@ -22,16 +22,7 @@ class Calculator extends Component {
       isEnteringValue: false,
       previousValue: "0",
       currentValue: "0",
-      currentFunction: false,
-
-      // The fields below are added for ne refactoring idea.
-
-      listOfCalculations: [],
-      inputs: {
-        ccurrentNumber: undefined,
-        nnnextNumber: undefined,
-        operand: undefined
-      }
+      currentFunction: false
     }
     this.handleClick = this.handleClick.bind(this);
     this.pressedCommand = this.pressedCommand.bind(this);
@@ -41,22 +32,6 @@ class Calculator extends Component {
     let button = event.target;
     let value = button.value;
     event.preventDefault();
-
-    // Check if I am typing number
-
-    // Which number to edit
-
-    // Edit number
-
-    // Check if both numbers are entered
-    // If so, push the inputs into the listOfCalculations
-    // and display current sum calculations
-    // Reset current inputs
-    // Modify operator
-    // Else Modify Operator
-    // set isTyping to false
-
-    // TODO: add finished property to the state so, that I will know when calculation is finished
 
     switch (type) {
       case "number":
@@ -199,7 +174,6 @@ getNewHistoryValue(operator, currentValue) {
 }
 
 clearCalculator() {
-  console.log("Clearing calculator...");
   this.setState(initialState);
 }
 
