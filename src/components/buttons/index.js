@@ -17,12 +17,12 @@ function Buttons({ clickHandler }) {
     return buttons;
   }
   return (
-    <section id="buttons">
-      <div id="numbers">{makeButtons("number", numbers, clickHandler)}</div>
-      <div id="operators">
+    <section className="buttons">
+      <div className="numbers">{makeButtons("number", numbers, clickHandler)}</div>
+      <div className="operators">
         {makeButtons("operator", operators, clickHandler)}
       </div>
-      <div id="commands">{makeButtons("command", commands, clickHandler)}</div>
+      <div className="commands">{makeButtons("command", commands, clickHandler)}</div>
     </section>
   );
 }

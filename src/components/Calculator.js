@@ -6,10 +6,10 @@ import getCalculatorFn from "./utils"
 
 const initialState = {
   history: "",
-  currentOutput: 0,
+  currentOutput: "0",
   isEnteringValue: false,
-  previousValue: 0,
-  currentValue: 0,
+  previousValue: "0",
+  currentValue: "0",
   currentFunction: false
 };
 

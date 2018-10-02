@@ -2,7 +2,7 @@ import React from 'react';
 
 const Screen = ({value, purpose}) => {
     return(
-        <div id={purpose}>{value}</div>
+        <div className={purpose}>{value}</div>
     )
 }
 

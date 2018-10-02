@@ -1,62 +1,90 @@
 :root {
-  --main-bg-color: AliceBlue;
-  --secondary-bg-color: brown;
+  --color-primary-0: #322c2c;
+  --color-primary-1: #150b0b;
+  --color-primary-2: #827979;
+  --color-primary-3: #cfcccc;
+  --color-primary-4: #aa0000;
+  --color-primary-5: #b0cc0f;
 }
 
 .calculator {
-  width: 750px;
-  border: 2px groove coral;
-  border-radius: 15px;
-  background-color: var(--main-bg-color);
-}
+  border: 1px groove black;
+  width: 639.5px;
 
-.NumberInputs {
-
+  background-color: var(--color-primary-0);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  justify-content: center;
 }
 
 button {
   font-size: 5em;
   width: 2em;
   text-align: center;
+  background-color: var(--color-primary-1);
+  color: var(--color-primary-3);
 }
 
-#display {
+.operators button {
+  background-color: var(--color-primary-3);
+  color: var(--color-primary-1);
+}
+
+.commands button {
+  background-color: var(--color-primary-4);
+  color: var(--color-primary-3);
+}
+
+button:hover {
+  background-color: brown;
+}
+
+.display {
   height: 150px;
-  border: 2px solid green;
+  border: 1px solid var(--secondary-bg-color);
   font-size: 3em;
-  background-color: var(--main-bg-color);
+  background: linear-gradient(
+    0deg,
+    var(--color-primary-4) 0%,
+    var(--color-primary-1) 50%,
+    var(--color-primary-1) 100%
+  );
+  color: var(--color-primary-3);
 }
 
-#currentOutput {
+.currentOutput {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   border-top: 1px solid #8c8b8b;
   height: 50%;
 }
 
-#history {
+.history {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   height: 50%;
 }
 
 .buttons {
   display: grid;
-  grid-column-gap: 1px;
-  grid-template-columns: 75px 75px 75px
+  grid-template-columns: 200px 200px 241px;
+  grid-column-gap: 2px;
 }
 
-#commands {
-  grid-row: 1 / 4;
-  background-color: blue;
-
+.commands {
+  grid-column: 1 / 4;
+  grid-row: 1;
 }
 
-#numbers {
-  background-color: blue;
-  grid-row: 1 / 4;
-
+.operators {
+  grid-row: 2;
+  grid-column: 1 / 4;
 }
 
-#operators {
-  background-color: blue;
-  grid-row: 1 / 4;
+.numbers {
+  grid-row: 3 / 7;
+  grid-column: 1 / 4;
 }
 
 
