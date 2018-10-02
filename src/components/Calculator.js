@@ -50,34 +50,6 @@ class Calculator extends Component {
     return "";
   }
 
- createCalculation(type, value, inputs) {
-   let isReady =!this.areAllValuesUndefined(inputs)
-   if(isReady) return isReady
-
-   let fn =undefined
-
-   switch(type) {
-    case "number":
-    this.pressedNumber(value);
-    break;
-  case "operator":
-    this.pressedOperator(value);
-    break;
-  case "command":
-    this.pressedCommand(value);
-    break;
-  default:
-    console.log("Pressed unknown command", "button", value);
-   }
-
-}
-
-areAllValuesUndefined(c) {
-  return Object.keys(c).map(key => c[key]).includes(undefined)
-}
-
-
-
 pressedNumber(value) {
   // Convert currentOutput to String
   let currentOutput = this.state.currentOutput
@@ -147,6 +119,8 @@ pressedCommand(value) {
       case "-+":
       this.negateCommand();
       break;
+      default:
+      console.log("Unexpected input")
   }
 
   return value;
@@ -172,8 +146,6 @@ negateCommand() {
   let currentOutput = this.state.currentOutput
 
   let number = -Number(currentOutput).toString()
-
-  console.log(number)
 
   this.setState({currentOutput: number})
 }
