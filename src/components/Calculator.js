@@ -6,10 +6,10 @@ import getCalculatorFn from "./utils";
 
 const initialState = {
   history: "",
-  isEnteringValue: false,
   previousValue: "0",
   currentValue: "0",
-  currentFunction: false
+  currentFunction: false,
+  isEnteringValue: false
 };
 
 class Calculator extends Component {
@@ -17,10 +17,10 @@ class Calculator extends Component {
     super(props);
     this.state = {
       history: "",
-      isEnteringValue: false,
       previousValue: "0",
       currentValue: "0",
-      currentFunction: false
+      currentFunction: false,
+      isEnteringValue: false
     };
     this.handleClick = this.handleClick.bind(this);
     this.pressedCommand = this.pressedCommand.bind(this);
@@ -126,8 +126,6 @@ class Calculator extends Component {
 
   equalsCommand() {
     let currentValue = this.evaluateCurrentFunction();
-    let history = ``;
-
     this.setState(prevState => {
       let currentState = {
         ...initialState,
