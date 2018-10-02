@@ -15,23 +15,23 @@ function getCalculatorFn(operator) {
   }
 }
 
-function add({ previousValue, currentOutput }) {
-  let result = Number(previousValue) + Number(currentOutput);
+function add({ previousValue, currentValue }) {
+  let result = Number(previousValue) + Number(currentValue);
   return result.toString();
 }
 
-function subtract({ previousValue, currentOutput }) {
-  let result = Number(previousValue) - Number(currentOutput);
+function subtract({ previousValue, currentValue }) {
+  let result = Number(previousValue) - Number(currentValue);
   return result.toString();
 }
 
-function divide({ previousValue, currentOutput }) {
-  let result = Number(previousValue) / Number(currentOutput);
+function divide({ previousValue, currentValue }) {
+  let result = Number(previousValue) / Number(currentValue);
   return result.toString();
 }
 
-function multiply({ previousValue, currentOutput }) {
-  let result = Number(previousValue) * Number(currentOutput);
+function multiply({ previousValue, currentValue }) {
+  let result = Number(previousValue) * Number(currentValue);
   return result.toString();
 }
 
